@@ -7,8 +7,10 @@
         <item name="android:textColorHighlight">@color/primary</item>
         <item name="android:textColorHighlightInverse">@color/primary</item>
         <item name="toolbarStyle">@style/MyActionBar</item>
-    </style>
 
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Toolbar">
         <item name="android:background">@color/primary</item>
         <!-- Support library compatibility -->

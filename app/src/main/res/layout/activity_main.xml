@@ -1,27 +1,38 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:custom="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="de.codecrafters.tableviewexample.MainActivity">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:fitsSystemWindows="true"
+tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/primary"
-        custom:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        custom:title="@string/title_activity_main"/>
+<android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+                                            android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay"
+                                            android:baselineAligned="false">
 
-    <de.codecrafters.tableviewexample.SortableCarTableView
-        android:id="@+id/tableView"
-        android:layout_below="@id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        custom:tableView_columnCount="4"
-        custom:tableView_headerColor="@color/primary"
-        custom:tableView_headerElevation="10"/>
+    <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+                                       android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+                                       android:elevation="2dp"
+                                       android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" >
+        <android.support.design.widget.TabLayout
+            android:id="@+id/navTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          />
+    </android.support.v7.widget.Toolbar>
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:id="@+id/navPager"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:background="@android:color/white">
 
-</RelativeLayout>
+
+    </android.support.v4.view.ViewPager>
+</android.support.design.widget.AppBarLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
 
 
